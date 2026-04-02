@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Double Dragon Elite Personal Training — Private, precision-engineered mind-body training for executives and high-performers in Kuala Lumpur." />
+  <title>Double Dragon — Elite Personal Training KL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">
+      <img src="assets/images/logo.png" alt="Double Dragon" class="nav-logo-img">
+    </a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#system" class="nav-link">The System</a></li>
+      <li><a href="#trainers" class="nav-link">The Specialists</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#who" class="nav-link">Who We Work With</a></li>
+      <li><a href="#apply" class="nav-cta">Apply for Training</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="hero-bg-placeholder"></div>
+      <!-- HERO IMAGE: replace the div above with:
+           <img src="assets/images/hero-bg.jpg" alt="" class="hero-bg-img"> -->
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow"><span class="eyebrow-line"></span>Kuala Lumpur · Private Training</p>
+      <h1 class="hero-title">Built for<br><em>precision.</em><br>Designed<br>to last.</h1>
+      <p class="hero-tagline">We don't deliver sessions. We build complete systems around your body, mind, and life — engineered for high-performers who demand measurable, lasting results.</p>
+      <div class="hero-actions">
+        <a href="#apply" class="btn-primary"><span>Apply for Training</span></a>
+        <a href="#system" class="btn-ghost">Discover the System</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-bar" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Precision Training</span><span class="mdot">·</span>
+      <span>Mind &amp; Body</span><span class="mdot">·</span>
+      <span>Nutrition Coaching</span><span class="mdot">·</span>
+      <span>Movement Science</span><span class="mdot">·</span>
+      <span>Private &amp; Personalised</span><span class="mdot">·</span>
+      <span>Kuala Lumpur</span><span class="mdot">·</span>
+      <span>Precision Training</span><span class="mdot">·</span>
+      <span>Mind &amp; Body</span><span class="mdot">·</span>
+      <span>Nutrition Coaching</span><span class="mdot">·</span>
+      <span>Movement Science</span><span class="mdot">·</span>
+      <span>Private &amp; Personalised</span><span class="mdot">·</span>
+      <span>Kuala Lumpur</span><span class="mdot">·</span>
+    </div>
+  </div>
+
+  <!-- PROBLEM -->
+  <section id="problem">
+    <div class="inner">
+      <div class="two-col">
+        <div class="reveal">
+          <p class="label">The Reality</p>
+          <h2 class="heading">Your schedule<br>doesn't fit <em>generic</em><br>training.</h2>
+          <div class="gold-line"></div>
+          <p class="body-text">You've had trainers before. You've started programmes. Results came — then stalled. The trainer didn't adapt. The system never accounted for your stress, your sleep, your mind.</p>
+          <p class="body-text">The problem isn't your discipline. <strong>It's the absence of a system built entirely around you</strong> — one that integrates body, mind, nutrition, and recovery as one continuous programme.</p>
+          <p class="body-text">In Malaysia's fitness market, most personal trainers operate session to session. At Double Dragon, we operate system to system.</p>
+        </div>
+        <div class="stat-col reveal delay-2">
+          <div class="stat-item">
+            <div class="stat-num">Total</div>
+            <div class="stat-lbl">Mind-body-nutrition integration — not just reps</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">100%</div>
+            <div class="stat-lbl">Bespoke programming — zero templates</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">On-site</div>
+            <div class="stat-lbl">Home, condo gym, or office — your space</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">Limited</div>
+            <div class="stat-lbl">Selective client intake — full focus guaranteed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFFERENTIATOR -->
+  <section id="difference">
+    <div class="inner">
+      <div class="center-header reveal">
+        <p class="label">What Sets Us Apart</p>
+        <h2 class="heading">Malaysia has personal trainers.<br><em>We are something else.</em></h2>
+      </div>
+      <div class="four-col">
+        <div class="diff-card reveal delay-1">
+          <div class="diff-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+          </div>
+          <h3>Mind-Body Integration</h3>
+          <p>Most KL trainers count reps. We assess how stress, sleep, and mental state affect your physical capacity — and programme around all of it.</p>
+        </div>
+        <div class="diff-card reveal delay-2">
+          <div class="diff-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <h3>Nutrition &amp; Lifestyle Coaching</h3>
+          <p>Personalised nutrition guidance, recovery protocols, and lifestyle coaching — built into your programme from day one. Not an upsell.</p>
+        </div>
+        <div class="diff-card reveal delay-3">
+          <div class="diff-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <path d="M9 9h6M9 12h6M9 15h4"/>
+            </svg>
+          </div>
+          <h3>Remote &amp; Advisory Services</h3>
+          <p>Can't train in person? We design your programme, audit your nutrition, and coach you remotely. Same precision. Same personalisation.</p>
+        </div>
+        <div class="diff-card reveal delay-4">
+          <div class="diff-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>Two Specialists, One System</h3>
+          <p>Two brothers. Two distinct methodologies — foundation and physique. Together they cover the complete spectrum no single trainer can match.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE SYSTEM -->
+  <section id="system">
+    <div class="inner">
+      <div class="system-intro reveal">
+        <p class="label">The System</p>
+        <h2 class="heading">Every detail.<br><em>Accounted for.</em></h2>
+        <div class="gold-line"></div>
+        <p class="body-text">Training, nutrition, recovery, and mindset — managed together as one integrated system. Nothing is siloed. Everything impacts your progress and everything is addressed.</p>
+      </div>
+      <div class="four-col">
+        <div class="step-card reveal delay-1">
+          <div class="step-num">01</div>
+          <div class="step-title">Assessment</div>
+          <p class="step-desc">A comprehensive evaluation — movement patterns, structural imbalances, injury history, recovery capacity, stress levels, nutrition habits, and lifestyle. Nothing assumed.</p>
+        </div>
+        <div class="step-card reveal delay-2">
+          <div class="step-num">02</div>
+          <div class="step-title">Design</div>
+          <p class="step-desc">A bespoke integrated system built around your body, mind, nutrition, goals, and schedule. Not a template. Not a package. Designed for you specifically.</p>
+        </div>
+        <div class="step-card reveal delay-3">
+          <div class="step-num">03</div>
+          <div class="step-title">Execute</div>
+          <p class="step-desc">Training at your space. Nutrition guidance woven in. Recovery monitored. Mind-body connection built into every session. Precision coaching — no exceptions.</p>
+        </div>
+        <div class="step-card reveal delay-4">
+          <div class="step-num">04</div>
+          <div class="step-title">Sustain</div>
+          <p class="step-desc">Continuous reassessment and programme evolution. No plateaus. No stagnation. Your system grows with you until your goals are not just met but exceeded.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINERS -->
+  <section id="trainers">
+    <div class="inner">
+      <div class="center-header reveal">
+        <p class="label">The Specialists</p>
+        <h2 class="heading">Two disciplines.<br>One <em>complete system.</em></h2>
+        <p class="sub-text">Kishore and Ramesh work independently with their own clients, each bringing a distinct specialisation — together forming a depth of expertise unmatched in KL.</p>
+      </div>
+      <div class="trainers-grid">
+
+        <div class="trainer-card reveal delay-1">
+          <div class="trainer-photo">
+            <img src="assets/images/kishore.png" alt="Kishore — The Architect">
+          </div>
+          <div class="trainer-info">
+            <p class="trainer-role">Specialist · Co-Founder</p>
+            <h3 class="trainer-name">Kishore</h3>
+            <p class="trainer-title">The Architect</p>
+            <p class="body-text">Kishore's approach is built on precision, structure, and long-term physical development. His work begins at the foundation — refining movement patterns that support strength, control, and resilience under load.</p>
+            <p class="body-text">He programmes for longevity. Clients don't just look better — they move better, sustain fewer injuries, and carry their results into every part of daily life.</p>
+            <div class="trainer-tags">
+              <span class="tag">Movement Quality</span>
+              <span class="tag">Core Strength</span>
+              <span class="tag">Injury Prevention</span>
+              <span class="tag">Longevity</span>
+              <span class="tag">Mind-Body Training</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="trainer-card reveal delay-2">
+          <div class="trainer-photo">
+            <img src="assets/images/ramesh.png" alt="Ramesh — The Sculptor">
+          </div>
+          <div class="trainer-info">
+            <p class="trainer-role">Specialist · Co-Founder</p>
+            <h3 class="trainer-name">Ramesh</h3>
+            <p class="trainer-title">The Sculptor</p>
+            <p class="body-text">Ramesh's methodology fuses classical physique development with advanced corrective science. Rooted in Golden Era bodybuilding principles, he prioritises symmetry, proportion, and complete muscular development.</p>
+            <p class="body-text">His core principle: genetics do not define potential. Execution does.</p>
+            <div class="trainer-tags">
+              <span class="tag">Physique Development</span>
+              <span class="tag">Corrective Science</span>
+              <span class="tag">Plateau-Breaking</span>
+              <span class="tag">Golden Era Methods</span>
+              <span class="tag">Nutrition Coaching</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="inner">
+      <div class="center-header reveal">
+        <p class="label">What We Offer</p>
+        <h2 class="heading">More than training.<br><em>A complete service.</em></h2>
+      </div>
+      <div class="services-grid">
+        <div class="svc-item reveal delay-1">
+          <div class="svc-num">01</div>
+          <h3 class="svc-title">Private On-Site Training</h3>
+          <p class="body-text">Fully personalised one-on-one training delivered at your home, condo gym, or office. Built around your environment, your body, and your schedule.</p>
+        </div>
+        <div class="svc-item reveal delay-2">
+          <div class="svc-num">02</div>
+          <h3 class="svc-title">Nutrition Coaching</h3>
+          <p class="body-text">Personalised nutrition guidance — not generic meal plans. Structured around your goals, lifestyle, and food preferences. Food as fuel, not restriction.</p>
+        </div>
+        <div class="svc-item reveal delay-3">
+          <div class="svc-num">03</div>
+          <h3 class="svc-title">Programme Design</h3>
+          <p class="body-text">A bespoke training programme designed for you to execute independently — at your gym, at home, or while travelling. Expert design, your execution.</p>
+        </div>
+        <div class="svc-item reveal delay-1">
+          <div class="svc-num">04</div>
+          <h3 class="svc-title">Remote Coaching &amp; Advisory</h3>
+          <p class="body-text">Full coaching support delivered remotely. Programme design, form review, nutrition guidance, and progress management — from anywhere in the world.</p>
+        </div>
+        <div class="svc-item reveal delay-2">
+          <div class="svc-num">05</div>
+          <h3 class="svc-title">Mind-Body Coaching</h3>
+          <p class="body-text">Integrating stress management, sleep quality, and mental performance into physical training. Because how you feel affects how you perform — every session.</p>
+        </div>
+        <div class="svc-item reveal delay-3">
+          <div class="svc-num">06</div>
+          <h3 class="svc-title">Recovery &amp; Lifestyle Management</h3>
+          <p class="body-text">Supported by a trusted network of specialists across physiotherapy, sports medicine, and wellness. Every factor affecting your progress is tracked and managed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO WE WORK WITH -->
+  <section id="who">
+    <div class="inner">
+      <div class="two-col">
+        <div class="reveal">
+          <p class="label">Who We Work With</p>
+          <h2 class="heading">We are <em>selective.</em><br>Intentionally.</h2>
+          <div class="gold-line"></div>
+          <p class="body-text">Double Dragon maintains a limited client roster to ensure every client receives the full weight of our attention, precision, and accountability.</p>
+          <ul class="who-list">
+            <li>Corporate executives and C-suite professionals with demanding schedules</li>
+            <li>Business owners who need structure, efficiency, and measurable outcomes</li>
+            <li>High-net-worth individuals who value privacy and a premium experience</li>
+            <li>Those who have plateaued or been let down by conventional training</li>
+            <li>Professionals recovering from injury requiring expert corrective work</li>
+            <li>Anyone serious about treating their body as a long-term investment</li>
+          </ul>
+        </div>
+        <div class="who-quote reveal delay-2">
+          <blockquote>"We intentionally work with a limited number of clients to maintain focus, quality, and consistency."</blockquote>
+          <cite>— Double Dragon, Elite Personal Training</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="inner">
+      <div class="center-header reveal">
+        <p class="label">How It Begins</p>
+        <h2 class="heading">From enquiry to<br><em>transformation.</em></h2>
+      </div>
+      <div class="process-list">
+        <div class="process-step reveal">
+          <div class="process-num">01</div>
+          <div class="process-content">
+            <h3>Submit Your Application</h3>
+            <p class="body-text">Fill in the form below. Tell us about your goals and schedule. We respond within 1 hour during operating hours.</p>
+          </div>
+        </div>
+        <div class="process-step reveal delay-1">
+          <div class="process-num">02</div>
+          <div class="process-content">
+            <h3>Initial Consultation</h3>
+            <p class="body-text">A private, no-obligation conversation to understand your history, goals, and lifestyle. In person or virtual — your preference.</p>
+          </div>
+        </div>
+        <div class="process-step reveal delay-2">
+          <div class="process-num">03</div>
+          <div class="process-content">
+            <h3>Comprehensive Assessment</h3>
+            <p class="body-text">Movement, structure, injury history, recovery, nutrition habits, stress levels. Your programme is built entirely from this — nothing else.</p>
+          </div>
+        </div>
+        <div class="process-step reveal delay-3">
+          <div class="process-num">04</div>
+          <div class="process-content">
+            <h3>Your System Begins</h3>
+            <p class="body-text">Training, nutrition, and mindset coaching — all integrated. Continuously reassessed and refined until your goals are exceeded.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLY -->
+  <section id="apply">
+    <div class="inner">
+      <div class="apply-grid">
+
+        <div class="apply-left reveal">
+          <p class="label">Apply for Training</p>
+          <h2 class="heading">Begin with<br>a <em>conversation.</em></h2>
+          <div class="gold-line"></div>
+          <p class="body-text">We work with a limited number of clients. If you're ready to invest in your physical and mental development with the precision it deserves, submit your application. We respond within 1 hour.</p>
+          <div class="apply-details">
+            <div class="apply-detail">
+              <div class="apply-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <strong>Location</strong>
+                <span>KL &amp; Greater KL · Home · Condo · Office</span>
+              </div>
+            </div>
+            <div class="apply-detail">
+              <div class="apply-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <strong>Response Time</strong>
+                <span>Within 1 hour during operating hours</span>
+              </div>
+            </div>
+            <div class="apply-detail">
+              <div class="apply-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <strong>Email</strong>
+                <!-- REPLACE with real email -->
+                <span>hello@doubledragonkl.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="apply-right reveal delay-2">
+          <form id="applyForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="first_name" placeholder="Ahmad" required>
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="last_name" placeholder="Rashid" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="femail">Email Address</label>
+              <input type="email" id="femail" name="email" placeholder="ahmad@company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="fphone">Phone Number</label>
+              <input type="tel" id="fphone" name="phone" placeholder="+60 12 345 6789">
+            </div>
+            <div class="form-group">
+              <label for="fservice">Service of Interest</label>
+              <select id="fservice" name="service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value="private">Private On-Site Training</option>
+                <option value="nutrition">Nutrition Coaching</option>
+                <option value="programme">Programme Design</option>
+                <option value="remote">Remote Coaching &amp; Advisory</option>
+                <option value="mindbody">Mind-Body Coaching</option>
+                <option value="unsure">Not sure — I need a consultation</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="fgoal">Primary Goal</label>
+              <select id="fgoal" name="goal" required>
+                <option value="" disabled selected>Select your primary goal</option>
+                <option value="strength">Build Strength &amp; Muscle</option>
+                <option value="physique">Physique Development</option>
+                <option value="weight">Weight Management</option>
+                <option value="corrective">Corrective / Injury Recovery</option>
+                <option value="performance">Athletic Performance</option>
+                <option value="longevity">Longevity &amp; Overall Health</option>
+                <option value="mindbody">Mind-Body Balance</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="fref">How did you hear about us?</label>
+              <select id="fref" name="referral">
+                <option value="" disabled selected>Select an option</option>
+                <option value="instagram">Instagram</option>
+                <option value="linkedin">LinkedIn</option>
+                <option value="referral">Personal Referral</option>
+                <option value="google">Google Search</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <button type="submit" id="submitBtn"><span id="submitText">Submit Application</span></button>
+          </form>
+          <!-- REPLACE number below with real WhatsApp number -->
+          <a href="https://wa.me/60123456789?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20Double%20Dragon%20Elite%20Personal%20Training." class="wa-btn" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Prefer WhatsApp? Message us directly
+          </a>
+          <p class="form-note">All enquiries are handled with complete discretion.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/logo.png" alt="Double Dragon" class="footer-logo">
+        <p class="footer-tagline">Discipline. Precision. Results.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#system">The System</a>
+        <a href="#trainers">Specialists</a>
+        <a href="#services">Services</a>
+        <a href="#who">Who We Work With</a>
+        <a href="#apply">Apply</a>
+      </nav>
+      <div class="footer-contact">
+        <!-- REPLACE with real details -->
+        <a href="mailto:hello@doubledragonkl.com">hello@doubledragonkl.com</a>
+        <a href="https://wa.me/60123456789" target="_blank">WhatsApp</a>
+        <a href="https://instagram.com/doubledragonkl" target="_blank">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Double Dragon Elite Personal Training. Kuala Lumpur, Malaysia. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
