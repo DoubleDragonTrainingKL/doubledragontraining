@@ -79,16 +79,20 @@ if (applyForm) {
     submitBtn.disabled = true;
     submitTxt.textContent = 'Sending…';
 
-    try {
-      const res = await fetch(applyForm.action, {
-        method: 'POST',
-        body: new FormData(applyForm),
-        headers: { 'Accept': 'application/json' }
-      });
-      res.ok ? showSuccess() : showError();
-    } catch {
-      showError();
-    }
+    // ── WIRE UP YOUR FORM BACKEND HERE ──────────────────────
+    // OPTION A: Formspree (recommended — free at formspree.io)
+    // const res = await fetch('https://formspree.io/f/YOUR_ID', {
+    //   method: 'POST', body: new FormData(applyForm),
+    //   headers: { 'Accept': 'application/json' }
+    // });
+    // res.ok ? showSuccess() : showError();
+
+    // OPTION B: EmailJS
+    // emailjs.sendForm('SERVICE_ID', 'TEMPLATE_ID', applyForm)
+    //   .then(showSuccess, showError);
+
+    // PLACEHOLDER — remove when wired up
+    setTimeout(showSuccess, 1200);
   });
 }
 
@@ -113,3 +117,61 @@ function showError() {
     submitTxt.textContent = 'Submit Application';
   }, 4000);
 }
+
+// TESTIMONIAL SLIDER
+(function() {
+  const grid  = document.querySelector('.testi-grid');
+  const cards = document.querySelectorAll('.testi-card');
+  const dots  = document.querySelectorAll('.testi-dot');
+  const prev  = document.getElementById('testiPrev');
+  const next  = document.getElementById('testiNext');
+  if (!grid || cards.length === 0) return;
+
+  let current = 0;
+  const total = cards.length;
+  const isMobile = () => window.innerWidth <= 860;
+
+  function goTo(idx) {
+    current = (idx + total) % total;
+    if (isMobile()) {
+      // On mobile: show one card at a time
+      cards.forEach((c, i) => {
+        c.style.display = i === current ? 'flex' : 'none';
+      });
+    } else {
+      // On desktop: show all three, scroll to current
+      cards.forEach(c => c.style.display = 'flex');
+      const cardW = cards[0].offsetWidth + 3; // width + gap
+      grid.style.transform = `translateX(${-current * cardW}px)`;
+    }
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function init() {
+    if (isMobile()) {
+      grid.style.gridTemplateColumns = '1fr';
+      cards.forEach((c, i) => { c.style.display = i === 0 ? 'flex' : 'none'; });
+    } else {
+      grid.style.gridTemplateColumns = 'repeat(3, 1fr)';
+      cards.forEach(c => c.style.display = 'flex');
+      grid.style.transform = 'translateX(0)';
+      grid.style.overflow = 'visible';
+    }
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  if (prev) prev.addEventListener('click', () => goTo(current - 1));
+  if (next) next.addEventListener('click', () => goTo(current + 1));
+  dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.idx)));
+
+  // Swipe support
+  let startX = 0;
+  grid.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  grid.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
+  }, { passive: true });
+
+  window.addEventListener('resize', init);
+  init();
+})();
