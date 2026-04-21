@@ -79,20 +79,16 @@ if (applyForm) {
     submitBtn.disabled = true;
     submitTxt.textContent = 'Sending…';
 
-    // ── WIRE UP YOUR FORM BACKEND HERE ──────────────────────
-    // OPTION A: Formspree (recommended — free at formspree.io)
-    // const res = await fetch('https://formspree.io/f/YOUR_ID', {
-    //   method: 'POST', body: new FormData(applyForm),
-    //   headers: { 'Accept': 'application/json' }
-    // });
-    // res.ok ? showSuccess() : showError();
-
-    // OPTION B: EmailJS
-    // emailjs.sendForm('SERVICE_ID', 'TEMPLATE_ID', applyForm)
-    //   .then(showSuccess, showError);
-
-    // PLACEHOLDER — remove when wired up
-    setTimeout(showSuccess, 1200);
+    try {
+      const res = await fetch(applyForm.action, {
+        method: 'POST',
+        body: new FormData(applyForm),
+        headers: { 'Accept': 'application/json' }
+      });
+      res.ok ? showSuccess() : showError();
+    } catch {
+      showError();
+    }
   });
 }
 
