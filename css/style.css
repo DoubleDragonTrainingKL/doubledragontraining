@@ -737,3 +737,22 @@ footer { background: var(--black); border-top: 1px solid rgba(201,151,43,.1); }
   .hero-title { font-size: 2.2rem; }
   .heading { font-size: 2rem; }
 }
+
+/* TRAINER WHATSAPP BUTTON */
+.trainer-wa {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 36px 36px;
+  padding: 13px 20px;
+  border: 1px solid rgba(37,211,102,.2);
+  color: #25D366;
+  font-size: .62rem;
+  font-weight: 500;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background .3s, border-color .3s;
+}
+.trainer-wa:hover { background: rgba(37,211,102,.06); border-color: rgba(37,211,102,.45); }
+.trainer-wa svg { width: 16px; height: 16px; fill: #25D366; flex-shrink: 0; }
