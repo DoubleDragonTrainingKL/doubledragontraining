@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Double Dragon Training KL — Training packages designed for professionals who want structured, personalised coaching that delivers real results." />
+  <title>Training Packages — Double Dragon Training KL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── PRICING PAGE SPECIFIC STYLES ── */
+
+    .pricing-hero {
+      position: relative;
+      padding: 160px 48px 80px;
+      background: var(--black);
+      text-align: center;
+      border-bottom: 1px solid rgba(201,151,43,.1);
+      overflow: hidden;
+    }
+    .pricing-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--gold);
+    }
+    .pricing-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(139,0,0,.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .pricing-hero .label { justify-content: center; }
+    .pricing-hero .label::before { display: none; }
+    .pricing-hero .heading { max-width: 700px; margin: 0 auto 20px; }
+    .pricing-hero-sub {
+      font-size: .9rem;
+      color: rgba(245,240,232,.5);
+      max-width: 580px;
+      margin: 0 auto 0;
+      line-height: 1.85;
+    }
+
+    /* STANDARD INTRO */
+    .standard-intro {
+      background: var(--dark2);
+      border-bottom: 1px solid rgba(201,151,43,.08);
+    }
+    .standard-intro .inner { padding: 60px 48px; }
+    .standard-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .standard-inner p {
+      font-size: .9rem;
+      color: rgba(245,240,232,.6);
+      line-height: 1.9;
+    }
+    .standard-inner p strong {
+      color: var(--cream);
+      font-weight: 500;
+    }
+
+    /* PACKAGES GRID */
+    .packages-section { background: var(--dark); }
+    .packages-section .inner { padding: 80px 48px 100px; }
+
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+      margin-bottom: 3px;
+    }
+    .packages-row-2 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+    }
+
+    .pkg-card {
+      background: var(--dark3);
+      padding: 44px 36px 48px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      border-top: 2px solid transparent;
+      transition: border-color .3s, background .3s;
+    }
+    .pkg-card:hover { border-top-color: var(--gold); background: #141414; }
+    .pkg-card.featured {
+      border-top-color: var(--gold);
+      background: #141414;
+    }
+    .pkg-card.featured::before {
+      content: 'MOST POPULAR';
+      position: absolute;
+      top: 0; right: 0;
+      background: var(--gold);
+      color: var(--dark);
+      font-size: .55rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      padding: 5px 14px;
+    }
+
+    .pkg-tier {
+      font-size: .58rem;
+      font-weight: 600;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .pkg-name {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--cream);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .pkg-price {
+      font-family: var(--serif);
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: var(--red);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .pkg-price-note {
+      font-size: .68rem;
+      color: var(--grey);
+      letter-spacing: .1em;
+      margin-bottom: 20px;
+    }
+    .pkg-desc {
+      font-size: .82rem;
+      color: rgba(245,240,232,.55);
+      line-height: 1.8;
+      margin-bottom: 28px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(245,240,232,.06);
+    }
+    .pkg-includes {
+      font-size: .6rem;
+      font-weight: 600;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .pkg-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+      margin-bottom: 32px;
+    }
+    .pkg-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: .8rem;
+      color: rgba(245,240,232,.7);
+      line-height: 1.6;
+    }
+    .pkg-features li::before {
+      content: '—';
+      color: var(--gold);
+      flex-shrink: 0;
+      font-size: .75rem;
+      margin-top: 1px;
+    }
+    .pkg-cta {
+      display: block;
+      text-align: center;
+      padding: 14px;
+      background: transparent;
+      border: 1px solid rgba(201,151,43,.3);
+      color: var(--gold);
+      font-size: .63rem;
+      font-weight: 600;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background .3s, border-color .3s, color .3s;
+      margin-top: auto;
+    }
+    .pkg-cta:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--dark);
+    }
+    .pkg-card.featured .pkg-cta {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--dark);
+    }
+    .pkg-card.featured .pkg-cta:hover {
+      background: var(--gold-lt);
+    }
+
+    /* LUNCHTIME row — 2 cards centered */
+    .packages-lunch {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3px;
+      margin-top: 3px;
+    }
+
+    /* UNIVERSAL BENEFITS */
+    .benefits-section {
+      background: var(--black);
+      border-top: 1px solid rgba(201,151,43,.08);
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3px;
+      margin-top: 60px;
+    }
+    .benefit-item {
+      padding: 36px 28px;
+      background: var(--dark3);
+      border-bottom: 2px solid transparent;
+      transition: border-color .3s, background .3s;
+    }
+    .benefit-item:hover { border-bottom-color: var(--gold); background: #141414; }
+    .benefit-icon {
+      width: 36px; height: 36px;
+      border: 1px solid rgba(201,151,43,.2);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px;
+    }
+    .benefit-icon svg { width: 16px; height: 16px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+    .benefit-item h3 {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .benefit-item p { font-size: .78rem; color: var(--grey); line-height: 1.75; }
+
+    /* BOTTOM CTA */
+    .pricing-cta-section {
+      background: var(--dark2);
+      border-top: 1px solid rgba(201,151,43,.08);
+    }
+    .pricing-cta-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 100px 48px;
+    }
+    .pricing-cta-inner .heading { margin-bottom: 16px; }
+    .pricing-cta-inner p {
+      font-size: .9rem;
+      color: rgba(245,240,232,.5);
+      line-height: 1.9;
+      margin-bottom: 44px;
+    }
+    .pricing-cta-btns {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .packages-grid { grid-template-columns: repeat(2, 1fr); }
+      .packages-row-2 { grid-template-columns: repeat(2, 1fr); }
+      .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 860px) {
+      .pricing-hero { padding: 120px 24px 60px; }
+      .packages-section .inner { padding: 60px 24px 80px; }
+      .packages-grid,
+      .packages-row-2,
+      .packages-lunch { grid-template-columns: 1fr; }
+      .benefits-grid { grid-template-columns: 1fr 1fr; }
+      .standard-intro .inner { padding: 48px 24px; }
+      .pricing-cta-inner { padding: 72px 24px; }
+    }
+    @media (max-width: 480px) {
+      .benefits-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/logo.png" alt="Double Dragon Training KL" class="nav-logo-img">
+    </a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#system" class="nav-link">The System</a></li>
+      <li><a href="index.html#trainers" class="nav-link">The Specialists</a></li>
+      <li><a href="index.html#services" class="nav-link">Services</a></li>
+      <li><a href="pricing.html" class="nav-link" style="color:var(--gold)">Packages</a></li>
+      <li><a href="index.html#apply" class="nav-cta">Apply for Training</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="pricing-hero">
+    <p class="label">Training Packages</p>
+    <h1 class="heading">Investment in your<br><em>performance.</em></h1>
+    <p class="pricing-hero-sub">Every package includes a comprehensive intake assessment. Your programme is built from that — not from a template. Choose the level of support that fits your life.</p>
+  </div>
+
+  <!-- STANDARD INTRO -->
+  <div class="standard-intro">
+    <div class="inner">
+      <div class="standard-inner reveal">
+        <p>Double Dragon Elite Personal Training is designed for <strong>professionals and individuals who want structured coaching, accountability, and sustainable progress</strong> integrated into real life. Every membership tier includes a comprehensive intake assessment and access to concierge-style wellness support.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PACKAGES -->
+  <section class="packages-section">
+    <div class="inner">
+
+      <!-- Row 1: Platinum, Gold, Silver -->
+      <div class="packages-grid">
+
+        <!-- PLATINUM -->
+        <div class="pkg-card reveal delay-1">
+          <p class="pkg-tier">Tier 01</p>
+          <h2 class="pkg-name">Platinum</h2>
+          <div class="pkg-price">RM 6,200</div>
+          <p class="pkg-price-note">Per membership package</p>
+          <p class="pkg-desc">For high-performing professionals who want a fully integrated coaching and lifestyle support system.</p>
+          <p class="pkg-includes">What's Included</p>
+          <ul class="pkg-features">
+            <li>20 private training sessions</li>
+            <li>Comprehensive intake assessment</li>
+            <li>Weekly programme and goal assessments</li>
+            <li>4 lifestyle &amp; performance coaching sessions</li>
+            <li>Travel support before, during, and after travel</li>
+            <li>Priority scheduling access</li>
+            <li>12-hour cancellation policy</li>
+          </ul>
+          <a href="index.html#apply" class="pkg-cta">Apply for Platinum</a>
+        </div>
+
+        <!-- GOLD -->
+        <div class="pkg-card featured reveal delay-2">
+          <p class="pkg-tier">Tier 02</p>
+          <h2 class="pkg-name">Gold</h2>
+          <div class="pkg-price">RM 4,800</div>
+          <p class="pkg-price-note">Per membership package</p>
+          <p class="pkg-desc">For professionals who want structured support, accountability, and personalised coaching integrated into real life.</p>
+          <p class="pkg-includes">What's Included</p>
+          <ul class="pkg-features">
+            <li>15 private training sessions</li>
+            <li>Comprehensive intake assessment</li>
+            <li>Bi-weekly programme and goal assessments</li>
+            <li>2 lifestyle &amp; performance coaching sessions</li>
+            <li>Priority scheduling access</li>
+            <li>24-hour cancellation policy</li>
+          </ul>
+          <a href="index.html#apply" class="pkg-cta">Apply for Gold</a>
+        </div>
+
+        <!-- SILVER -->
+        <div class="pkg-card reveal delay-3">
+          <p class="pkg-tier">Tier 03</p>
+          <h2 class="pkg-name">Silver</h2>
+          <div class="pkg-price">RM 4,400</div>
+          <p class="pkg-price-note">Per membership package</p>
+          <p class="pkg-desc">For individuals who want personalised training, structure, and accountability in a streamlined coaching format.</p>
+          <p class="pkg-includes">What's Included</p>
+          <ul class="pkg-features">
+            <li>15 personalised training sessions</li>
+            <li>Comprehensive intake assessment</li>
+            <li>1 lifestyle &amp; performance coaching session</li>
+            <li>24-hour cancellation policy</li>
+          </ul>
+          <a href="index.html#apply" class="pkg-cta">Apply for Silver</a>
+        </div>
+
+      </div>
+
+      <!-- Row 2: Bronze + Lunchtime -->
+      <div class="packages-lunch">
+
+        <!-- BRONZE -->
+        <div class="pkg-card reveal delay-1">
+          <p class="pkg-tier">Tier 04</p>
+          <h2 class="pkg-name">Bronze</h2>
+          <div class="pkg-price">RM 3,000</div>
+          <p class="pkg-price-note">Per membership package</p>
+          <p class="pkg-desc">For individuals looking for a structured and personalised alternative to standard gym training.</p>
+          <p class="pkg-includes">What's Included</p>
+          <ul class="pkg-features">
+            <li>12 personalised training sessions</li>
+            <li>Comprehensive intake assessment</li>
+            <li>Structured training support</li>
+            <li>24-hour cancellation policy</li>
+          </ul>
+          <a href="index.html#apply" class="pkg-cta">Apply for Bronze</a>
+        </div>
+
+        <!-- LUNCHTIME EXPRESS -->
+        <div class="pkg-card reveal delay-2">
+          <p class="pkg-tier">Express</p>
+          <h2 class="pkg-name">Lunchtime Express</h2>
+          <div class="pkg-price">RM 1,250</div>
+          <p class="pkg-price-note">Per membership package</p>
+          <p class="pkg-desc">For busy professionals who want efficient training during lunch breaks or around demanding schedules.</p>
+          <p class="pkg-includes">What's Included</p>
+          <ul class="pkg-features">
+            <li>10 private 30-minute training sessions</li>
+            <li>Comprehensive intake assessment</li>
+            <li>24-hour cancellation policy</li>
+          </ul>
+          <a href="index.html#apply" class="pkg-cta">Apply for Express</a>
+        </div>
+
+      </div>
+
+      <!-- LUNCHTIME EXPRESS PLUS — full width -->
+      <div style="margin-top:3px;">
+        <div class="pkg-card reveal" style="border-top-color: rgba(201,151,43,0.3);">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;">
+            <div>
+              <p class="pkg-tier">Express Plus</p>
+              <h2 class="pkg-name">Lunchtime Express Plus</h2>
+              <div class="pkg-price">RM 2,500</div>
+              <p class="pkg-price-note">Per membership package</p>
+              <p class="pkg-desc">For professionals who want maximum efficiency with additional structure and accountability built in.</p>
+            </div>
+            <div>
+              <p class="pkg-includes">What's Included</p>
+              <ul class="pkg-features">
+                <li>10 private 30-minute training sessions</li>
+                <li>Comprehensive intake assessment</li>
+                <li>Enhanced accountability and support</li>
+                <li>Priority scheduling access</li>
+                <li>24-hour cancellation policy</li>
+              </ul>
+              <a href="index.html#apply" class="pkg-cta">Apply for Express Plus</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- UNIVERSAL BENEFITS -->
+  <section class="benefits-section">
+    <div class="inner">
+      <div class="center-header reveal">
+        <p class="label">Universal Member Benefits</p>
+        <h2 class="heading">Every tier includes<br><em>more than sessions.</em></h2>
+        <p class="sub-text">All membership tiers include access to concierge-style wellness support and à la carte services based on individual client needs.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-item reveal delay-1">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Supplement &amp; Wellness Coordination</h3>
+          <p>Guidance on supplements and wellness support tailored to your programme and health goals.</p>
+        </div>
+        <div class="benefit-item reveal delay-2">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Recovery &amp; Wellness Recommendations</h3>
+          <p>Additional recovery strategies and wellness guidance delivered as part of your ongoing support.</p>
+        </div>
+        <div class="benefit-item reveal delay-3">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>À La Carte Coaching Services</h3>
+          <p>Additional coaching and support services available outside your package based on individual needs.</p>
+        </div>
+        <div class="benefit-item reveal delay-4">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Personalised Consistency Guidance</h3>
+          <p>Guidance designed to reduce friction and improve consistency — inside and outside your sessions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="pricing-cta-section">
+    <div class="pricing-cta-inner">
+      <p class="label" style="justify-content:center;margin-bottom:20px;"><span></span>Ready to Begin</p>
+      <h2 class="heading">Not sure which<br>package is right?<br><em>We'll figure it out together.</em></h2>
+      <p>Submit an application and we'll recommend the right package based on your goals, schedule, and lifestyle during your initial consultation. No commitment required.</p>
+      <div class="pricing-cta-btns">
+        <a href="index.html#apply" class="btn-primary"><span>Apply for Training</span></a>
+        <a href="https://wa.me/message/W3TP2S5G4AGQA1" class="btn-ghost" target="_blank" rel="noopener noreferrer">Message us on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/logo.png" alt="Double Dragon Training KL" class="footer-logo">
+        <p class="footer-tagline">Discipline. Precision. Results.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html#system">The System</a>
+        <a href="index.html#trainers">Specialists</a>
+        <a href="index.html#services">Services</a>
+        <a href="pricing.html">Packages</a>
+        <a href="index.html#apply">Apply</a>
+      </nav>
+      <div class="footer-contact">
+        <a href="mailto:train@doubledragontraining.com">train@doubledragontraining.com</a>
+        <a href="https://wa.me/message/W3TP2S5G4AGQA1" target="_blank">WhatsApp</a>
+        <a href="https://instagram.com/doubledragonkl" target="_blank">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Double Dragon Training KL. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
