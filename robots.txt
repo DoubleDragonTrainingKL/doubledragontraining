@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /assets/icons/
+
+Sitemap: https://doubledragontraining.com/sitemap.xml
